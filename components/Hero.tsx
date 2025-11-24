@@ -1,6 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Hero: React.FC = () => {
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+    let hasInteracted = false;
+
+    const handleInteraction = () => {
+      hasInteracted = true;
+      clearTimeout(timeout);
+    };
+
+    // Set up interaction listeners
+    const events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'];
+    events.forEach(event => {
+      window.addEventListener(event, handleInteraction);
+    });
+
+    // Auto-scroll after 10 seconds if no interaction
+    timeout = setTimeout(() => {
+      if (!hasInteracted) {
+        const menuSection = document.querySelector('#menu');
+        if (menuSection) {
+          menuSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, 10000);
+
+    return () => {
+      clearTimeout(timeout);
+      events.forEach(event => {
+        window.removeEventListener(event, handleInteraction);
+      });
+    };
+  }, []);
+
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -33,7 +66,7 @@ const Hero: React.FC = () => {
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center relative">
             <a
-              href="#signature"
+              href="#menu"
               className="px-10 py-4 border border-white/30 bg-black/20 backdrop-blur-sm text-white font-serif uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
             >
               Experience the Taste

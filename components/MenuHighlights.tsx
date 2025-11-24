@@ -44,37 +44,35 @@ const MenuHighlights: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
 
         {/* Signature Dish Spotlight */}
-        <div id="signature">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/2">
-              <div className="relative group">
-                <div className="absolute -inset-2 bg-gold-400/20 blur-lg group-hover:bg-gold-400/30 transition-all duration-500"></div>
-                <img
-                  src={signatureDish?.imageUrl}
-                  alt={signatureDish?.title}
-                  className={`relative w-full h-[600px] object-cover transition-all duration-700 ease-in-out shadow-2xl ${isColorized ? 'grayscale-0' : 'grayscale group-hover:grayscale-0'}`}
-                />
-                <div className="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black to-transparent w-full">
-                  <p className="font-script text-4xl text-gold-400">The Signature</p>
-                </div>
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="lg:w-1/2">
+            <div className="relative group">
+              <div className="absolute -inset-2 bg-gold-400/20 blur-lg group-hover:bg-gold-400/30 transition-all duration-500"></div>
+              <img
+                src={signatureDish?.imageUrl}
+                alt={signatureDish?.title}
+                className={`relative w-full h-[600px] object-cover transition-all duration-700 ease-in-out shadow-2xl ${isColorized ? 'grayscale-0' : 'grayscale group-hover:grayscale-0'}`}
+              />
+              <div className="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black to-transparent w-full">
+                <p className="font-script text-4xl text-gold-400">The Signature</p>
               </div>
             </div>
+          </div>
 
-            <div className="lg:w-1/2 text-center lg:text-left">
-              <SignatureDishTitle onAnimationPhaseChange={handleAnimationPhaseChange} />
-              <div className="h-1 w-24 bg-gold-400 mx-auto lg:mx-0 mb-8"></div>
-              <p className="font-sans text-xl text-gray-300 leading-relaxed mb-8 font-light">
-                {signatureDish?.description}
-              </p>
-              <p className="font-serif italic text-gold-400 text-lg">
-                "We don't call it Shrimp and Grits here. The grits are the star."
-              </p>
-            </div>
+          <div className="lg:w-1/2 text-center lg:text-left">
+            <SignatureDishTitle onAnimationPhaseChange={handleAnimationPhaseChange} />
+            <div className="h-1 w-24 bg-gold-400 mx-auto lg:mx-0 mb-8"></div>
+            <p className="font-sans text-xl text-gray-300 leading-relaxed mb-8 font-light">
+              {signatureDish?.description}
+            </p>
+            <p className="font-serif italic text-gold-400 text-lg">
+              "We don't call it Shrimp and Grits here. The grits are the star."
+            </p>
           </div>
         </div>
-
       </div>
-    </section>
+
+    </section >
   );
 };
 
