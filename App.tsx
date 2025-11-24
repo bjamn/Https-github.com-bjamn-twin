@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import MenuHighlights from './components/MenuHighlights';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
-import ChatWidget from './components/ChatWidget';
+// import ChatWidget from './components/ChatWidget';
 import OwnerBio from './components/OwnerBio';
 
 const App: React.FC = () => {
@@ -18,7 +18,7 @@ const App: React.FC = () => {
         <OwnerBio />
         <Contact />
       </main>
-      <ChatWidget />
+      {/* <ChatWidget /> */}
     </div>
   );
 };
