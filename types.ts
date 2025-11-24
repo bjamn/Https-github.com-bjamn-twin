@@ -20,3 +20,10 @@ export interface ChatMessage {
   text: string;
   isThinking?: boolean;
 }
+
+export interface OwnerBioData {
+  title: string;
+  name: string;
+  quote: string;
+  paragraphs: string[];
+}
