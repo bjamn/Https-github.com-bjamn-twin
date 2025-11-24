@@ -36,41 +36,55 @@
     animation: shiver 0.2s infinite;
   }
 
-  .swap-below {
-    animation: swap-below 1.5s ease-in-out forwards;
+  .swap-shrimp {
+    animation: swap-shrimp 1.5s ease-in-out forwards;
   }
 
-  .swap-above {
-    animation: swap-above 1.5s ease-in-out forwards;
+  .swap-grits {
+    animation: swap-grits 1.5s ease-in-out forwards;
   }
 
-  @keyframes swap-below {
+  .swap-and {
+    animation: stay-center 1.5s ease-in-out forwards;
+  }
+
+  @keyframes swap-shrimp {
     0% {
       transform: translate(0, 0);
     }
 
     50% {
-      transform: translate(calc((var(--end-x) - 0px) / 2), 40px);
+      transform: translate(35%, 30px);
     }
 
     100% {
-      left: var(--end-x);
-      transform: translate(0, 0);
+      transform: translate(70%, 0);
     }
   }
 
-  @keyframes swap-above {
+  @keyframes swap-grits {
     0% {
       transform: translate(0, 0);
     }
 
     50% {
-      transform: translate(calc((var(--end-x) - 0px) / 2), -40px);
+      transform: translate(-35%, -30px);
     }
 
     100% {
-      left: var(--end-x);
-      transform: translate(0, 0);
+      transform: translate(-70%, 0);
+    }
+  }
+
+  @keyframes stay-center {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
     }
   }
 }

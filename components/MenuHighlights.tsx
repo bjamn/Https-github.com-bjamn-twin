@@ -21,12 +21,14 @@ const MenuHighlights: React.FC = () => {
 
   const [isColorized, setIsColorized] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  const handleAnimationPhaseChange = (phase: 'initial' | 'shivering' | 'swapping' | 'final') => {
+    // Colorize image at final stage
+    if (phase === 'final') {
       setIsColorized(true);
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, []);
+    } else if (phase === 'initial') {
+      setIsColorized(false);
+    }
+  };
 
   const signatureDish = menuItems.find(item => item.category === 'Signature');
 
@@ -59,7 +61,7 @@ const MenuHighlights: React.FC = () => {
             </div>
 
             <div className="lg:w-1/2 text-center lg:text-left">
-              <SignatureDishTitle />
+              <SignatureDishTitle onAnimationPhaseChange={handleAnimationPhaseChange} />
               <div className="h-1 w-24 bg-gold-400 mx-auto lg:mx-0 mb-8"></div>
               <p className="font-sans text-xl text-gray-300 leading-relaxed mb-8 font-light">
                 {signatureDish?.description}
