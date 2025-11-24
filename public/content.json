@@ -1,0 +1,44 @@
+{
+  "menuItems": [
+    {
+      "id": "1",
+      "title": "Grits and Shrimp",
+      "description": "The dish that started it all. Creamy, stone-ground grits taking center stage, topped with succulent, seasoned shrimp in a savory southern sauce.",
+      "category": "Signature",
+      "imageUrl": "/grits-shrimp.png"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "celebrityName": "Luenell Campbell",
+      "role": "Comedian & Actress",
+      "quote": "That ain't just food, that's a whole mood. Twin's cooking is no joke!",
+      "videoThumbnail": "/celebrity.jpeg"
+    },
+    {
+      "id": "t2",
+      "celebrityName": "Alvin Chea",
+      "role": "Bass Singer, Take 6",
+      "quote": "The harmony of flavors in that Grits and Shrimp hits all the right notes. A true soulful performance.",
+      "videoThumbnail": "/alvin-thumb.png",
+      "videoUrl": "/Alvin.mp4"
+    },
+    {
+      "id": "t3",
+      "celebrityName": "Kim Whitley",
+      "role": "Comedian & Actress",
+      "quote": "I know good food, and this is IT. I'd book 'With Love, Twin' for every event if I could!",
+      "videoThumbnail": "/kim-thumb.png",
+      "videoUrl": "/Kim.mp4"
+    },
+    {
+      "id": "t4",
+      "celebrityName": "Rodney Dean Boyden",
+      "role": "DFW Musician",
+      "quote": "The soul in this food is as deep as the music I play. A taste of home, elevated.",
+      "videoThumbnail": "/rodney-thumb.png",
+      "videoUrl": "/rodney.mp4"
+    }
+  ]
+}

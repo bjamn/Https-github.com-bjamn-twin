@@ -1,15 +1,8 @@
-export enum MenuItemCategory {
-  SIGNATURE = 'Signature',
-  MAIN = 'Main Course',
-  SIDE = 'Sides',
-  DESSERT = 'Dessert'
-}
-
 export interface MenuItem {
   id: string;
   title: string;
   description: string;
-  category: MenuItemCategory;
+  category: string;
   imageUrl: string;
 }
 
@@ -19,6 +12,7 @@ export interface Testimonial {
   role: string; // e.g., "Actor", "Musician"
   quote: string;
   videoThumbnail: string;
+  videoUrl?: string;
 }
 
 export interface ChatMessage {

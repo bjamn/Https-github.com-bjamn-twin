@@ -5,6 +5,7 @@ import MenuHighlights from './components/MenuHighlights';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import ChatWidget from './components/ChatWidget';
+import OwnerBio from './components/OwnerBio';
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <Hero />
         <MenuHighlights />
         <Testimonials />
+        <OwnerBio />
         <Contact />
       </main>
       <ChatWidget />

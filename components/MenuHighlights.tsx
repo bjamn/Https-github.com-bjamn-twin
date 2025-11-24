@@ -1,10 +1,28 @@
-import React from 'react';
-import { MENU_ITEMS } from '../constants';
-import { MenuItemCategory } from '../types';
+import React, { useState, useEffect } from 'react';
+import { MenuItem } from '../types';
 
 const MenuHighlights: React.FC = () => {
-  const signatureDish = MENU_ITEMS.find(item => item.category === MenuItemCategory.SIGNATURE);
-  const otherDishes = MENU_ITEMS.filter(item => item.category !== MenuItemCategory.SIGNATURE);
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
+
+  useEffect(() => {
+    const fetchMenuData = async () => {
+      try {
+        const response = await fetch('/content.json');
+        const data = await response.json();
+        setMenuItems(data.menuItems);
+      } catch (error) {
+        console.error("Failed to fetch menu data:", error);
+      }
+    };
+
+    fetchMenuData();
+  }, []);
+
+  const signatureDish = menuItems.find(item => item.category === 'Signature');
+
+  if (menuItems.length === 0) {
+    return <section id="menu" className="py-24 bg-black text-white">Loading menu...</section>;
+  }
 
   return (
     <section id="menu" className="py-24 bg-black text-white relative">
@@ -14,7 +32,7 @@ const MenuHighlights: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         
         {/* Signature Dish Spotlight */}
-        <div id="signature" className="mb-32">
+        <div id="signature">
             <div className="flex flex-col lg:flex-row items-center gap-16">
                 <div className="lg:w-1/2">
                     <div className="relative group">
@@ -42,33 +60,6 @@ const MenuHighlights: React.FC = () => {
                     </p>
                 </div>
             </div>
-        </div>
-
-        {/* Other Menu Items Grid */}
-        <div className="text-center mb-16">
-            <h3 className="font-script text-5xl mb-4">Southern Classics</h3>
-            <p className="font-serif text-gray-400 uppercase tracking-widest text-sm">Curated with Love</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8">
-            {otherDishes.map((item) => (
-                <div key={item.id} className="group relative h-[400px] overflow-hidden cursor-pointer">
-                    <img 
-                        src={item.imageUrl} 
-                        alt={item.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-80"
-                    />
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center border border-white/10 m-4 group-hover:border-gold-400/50 transition-colors duration-500">
-                        <h4 className="font-serif text-3xl md:text-4xl mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            {item.title}
-                        </h4>
-                        <p className="font-sans text-gray-300 max-w-sm opacity-0 group-hover:opacity-100 transform translate-y-8 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                            {item.description}
-                        </p>
-                    </div>
-                </div>
-            ))}
         </div>
 
       </div>
