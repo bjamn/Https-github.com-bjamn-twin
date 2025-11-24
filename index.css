@@ -15,9 +15,11 @@
       transform: scale(1.05) translate(0, 0);
       filter: grayscale(100%);
     }
+
     50% {
       filter: grayscale(0%);
     }
+
     100% {
       transform: scale(1.15) translate(-2%, 2%);
       filter: grayscale(0%);

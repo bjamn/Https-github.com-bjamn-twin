@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MenuItem } from '../types';
+import SignatureDishTitle from './SignatureDishTitle';
 
 const MenuHighlights: React.FC = () => {
   const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
@@ -56,10 +57,9 @@ const MenuHighlights: React.FC = () => {
                 </div>
               </div>
             </div>
+
             <div className="lg:w-1/2 text-center lg:text-left">
-              <h2 className="font-serif text-5xl md:text-7xl mb-8 leading-tight">
-                {signatureDish?.title}
-              </h2>
+              <SignatureDishTitle />
               <div className="h-1 w-24 bg-gold-400 mx-auto lg:mx-0 mb-8"></div>
               <p className="font-sans text-xl text-gray-300 leading-relaxed mb-8 font-light">
                 {signatureDish?.description}
