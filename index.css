@@ -49,62 +49,44 @@
   }
 
   @keyframes swap-shrimp {
+
+    /* Phase 1: Move down to create clearance (0-15%) */
     0% {
       transform: translate(0, 0);
     }
 
-    /* Step 1: Move down below center */
-    20% {
-      transform: translate(10%, 50px);
+    15% {
+      transform: translate(0, 60px);
     }
 
-    /* Step 2: Continue down and right, significant lateral movement */
-    40% {
-      transform: translate(50%, 60px);
-    }
-
-    /* Step 3: Move much further right, nearly at final horizontal position */
-    65% {
-      transform: translate(95%, 55px);
-    }
-
-    /* Step 4: Settle into final horizontal position, start moving up */
+    /* Phase 2: Move horizontally to final position while staying down (15-85%) */
     85% {
-      transform: translate(100%, 30px);
+      transform: translate(100%, 60px);
     }
 
-    /* Step 5: Final vertical alignment */
+    /* Phase 3: Rise up into final position (85-100%) */
     100% {
       transform: translate(100%, 0);
     }
   }
 
   @keyframes swap-grits {
+
+    /* Phase 1: Move up to create clearance (0-15%) */
     0% {
       transform: translate(0, 0);
     }
 
-    /* Step 1: Move up above center */
-    20% {
-      transform: translate(-10%, -50px);
+    15% {
+      transform: translate(0, -60px);
     }
 
-    /* Step 2: Continue up and left, significant lateral movement */
-    40% {
-      transform: translate(-50%, -60px);
-    }
-
-    /* Step 3: Move much further left, nearly at final horizontal position */
-    65% {
-      transform: translate(-95%, -55px);
-    }
-
-    /* Step 4: Settle into final horizontal position, start moving down */
+    /* Phase 2: Move horizontally to final position while staying up (15-85%) */
     85% {
-      transform: translate(-100%, -30px);
+      transform: translate(-100%, -60px);
     }
 
-    /* Step 5: Final vertical alignment */
+    /* Phase 3: Drop down into final position (85-100%) */
     100% {
       transform: translate(-100%, 0);
     }
