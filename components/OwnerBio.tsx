@@ -64,7 +64,7 @@ const OwnerBio: React.FC = () => {
                         ))}
 
                         <div className="mt-10">
-                            <img src="/logo-full.jpg" alt="With Love, Twin Logo" className="h-24 md:h-32 opacity-80 mix-blend-screen" />
+                            <img src="/logo-full.jpg" alt="With Love, Twin Logo" className="w-full h-auto opacity-90" />
                         </div>
                     </div>
                 </div>
