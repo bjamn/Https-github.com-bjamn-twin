@@ -61,12 +61,12 @@
 
     /* Phase 2: Move horizontally to final position while staying down (15-85%) */
     85% {
-      transform: translate(175%, 60px);
+      transform: translate(150%, 60px);
     }
 
     /* Phase 3: Rise up into final position (85-100%) */
     100% {
-      transform: translate(175%, 0);
+      transform: translate(150%, 0);
     }
   }
 
