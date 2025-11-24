@@ -10,13 +10,6 @@
   ],
   "testimonials": [
     {
-      "id": "t1",
-      "celebrityName": "Luenell Campbell",
-      "role": "Comedian & Actress",
-      "quote": "That ain't just food, that's a whole mood. Twin's cooking is no joke!",
-      "videoThumbnail": "/celebrity.jpeg"
-    },
-    {
       "id": "t2",
       "celebrityName": "Alvin Chea",
       "role": "Bass Singer, Take 6",
@@ -39,6 +32,13 @@
       "quote": "The soul in this food is as deep as the music I play. A taste of home, elevated.",
       "videoThumbnail": "/rodney-thumb.png",
       "videoUrl": "/rodney.mp4"
+    },
+    {
+      "id": "t1",
+      "celebrityName": "Luenell Campbell",
+      "role": "Comedian & Actress",
+      "quote": "That ain't just food, that's a whole mood. Twin's cooking is no joke!",
+      "videoThumbnail": "/celebrity.jpeg"
     }
   ]
 }
