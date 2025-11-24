@@ -4,6 +4,7 @@ import { Testimonial } from '../types';
 const Testimonials: React.FC = () => {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const fetchTestimonials = async () => {
@@ -19,12 +20,37 @@ const Testimonials: React.FC = () => {
     fetchTestimonials();
   }, []);
 
+  useEffect(() => {
+    // Set up intersection observer to pause videos when scrolling away
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            // Section is out of view, stop any playing video
+            setActiveVideo(null);
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when less than 10% visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   if (testimonials.length === 0) {
     return <section id="testimonials" className="py-24 bg-zinc-950 text-white">Loading testimonials...</section>;
   }
 
   return (
-    <section id="testimonials" className="py-24 bg-zinc-950 text-white overflow-hidden">
+    <section ref={sectionRef} id="testimonials" className="py-24 bg-zinc-950 text-white overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="mb-20 text-center">
           <span className="font-serif text-gold-400 uppercase tracking-[0.2em] text-sm">Wall of Love</span>
