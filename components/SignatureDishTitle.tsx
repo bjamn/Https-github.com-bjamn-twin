@@ -47,12 +47,12 @@ const SignatureDishTitle: React.FC<SignatureDishTitleProps> = ({ onAnimationPhas
         const timer2 = setTimeout(() => setStage('swapping'), 3000);
         const timer3 = setTimeout(() => setStage('final'), 6200); // 3s start + 3s animation + 200ms buffer
 
-        // Loop: wait 5s at final, then restart
+        // Loop: wait 30s at final, then restart
         const timer4 = setTimeout(() => {
             setHasStarted(false);
             setStage('initial');
             setTimeout(() => startAnimation(), 100);
-        }, 11200); // 6.2s + 5s
+        }, 36200); // 6.2s + 30s
 
         return () => {
             clearTimeout(timer1);
