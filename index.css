@@ -37,15 +37,15 @@
   }
 
   .swap-shrimp {
-    animation: swap-shrimp 1.5s ease-in-out forwards;
+    animation: swap-shrimp 3s ease-in-out forwards;
   }
 
   .swap-grits {
-    animation: swap-grits 1.5s ease-in-out forwards;
+    animation: swap-grits 3s ease-in-out forwards;
   }
 
   .swap-and {
-    animation: stay-center 1.5s ease-in-out forwards;
+    animation: stay-center 3s ease-in-out forwards;
   }
 
   @keyframes swap-shrimp {
@@ -53,10 +53,22 @@
       transform: translate(0, 0);
     }
 
-    50% {
-      transform: translate(35%, 30px);
+    /* Step 1: Move down below center */
+    25% {
+      transform: translate(10%, 50px);
     }
 
+    /* Step 2: Continue down and right */
+    50% {
+      transform: translate(35%, 60px);
+    }
+
+    /* Step 3: Move further right */
+    75% {
+      transform: translate(65%, 50px);
+    }
+
+    /* Step 4: Move up into final position */
     100% {
       transform: translate(70%, 0);
     }
@@ -67,10 +79,22 @@
       transform: translate(0, 0);
     }
 
-    50% {
-      transform: translate(-35%, -30px);
+    /* Step 1: Move up above center */
+    25% {
+      transform: translate(-10%, -50px);
     }
 
+    /* Step 2: Continue up and left */
+    50% {
+      transform: translate(-35%, -60px);
+    }
+
+    /* Step 3: Move further left */
+    75% {
+      transform: translate(-65%, -50px);
+    }
+
+    /* Step 4: Move down into final position */
     100% {
       transform: translate(-70%, 0);
     }
