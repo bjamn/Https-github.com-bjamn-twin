@@ -45,8 +45,6 @@ const Testimonials: React.FC = () => {
                     src={testimonial.videoUrl}
                     className="w-full h-full object-cover"
                     autoPlay
-                    muted
-                    loop
                     playsInline
                   />
                 ) : (
