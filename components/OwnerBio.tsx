@@ -64,7 +64,10 @@ const OwnerBio: React.FC = () => {
                         ))}
 
                         <div className="mt-12 flex flex-col md:flex-row items-center gap-6">
-                            <p className="font-script text-5xl md:text-6xl text-gold-400">With Love, Twin</p>
+                            <p className="text-5xl md:text-6xl text-gold-400">
+                                <span className="font-script">W</span>
+                                <span className="font-serif">ith Love, Twin</span>
+                            </p>
                             <img src="/logo-new.svg" alt="With Love, Twin Logo" className="h-20 w-auto opacity-90" />
                         </div>
                     </div>

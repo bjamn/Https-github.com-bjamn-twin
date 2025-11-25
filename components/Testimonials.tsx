@@ -111,7 +111,10 @@ const Testimonials: React.FC = () => {
         </div>
 
         <div className="mt-20 text-center">
-          <p className="font-script text-3xl text-gray-500">Trusted by the icons you love.</p>
+          <p className="text-3xl text-gray-500">
+            <span className="font-script">T</span>
+            <span className="font-serif">rusted by the icons you love.</span>
+          </p>
         </div>
       </div>
     </section>

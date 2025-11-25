@@ -123,8 +123,14 @@ const ChatWidget: React.FC = () => {
           {/* Header */}
           <div className="bg-zinc-950 p-4 border-b border-gray-800 flex justify-between items-center">
             <div>
-              <h3 className="font-script text-2xl text-white">Ask Twin</h3>
-              <p className="text-xs text-gold-400 uppercase tracking-wider">Virtual Concierge</p>
+              <h3 className="text-2xl text-white">
+                <span className="font-script">A</span>
+                <span className="font-serif">sk Twin</span>
+              </h3>
+              <p className="text-xs text-gold-400 uppercase tracking-wider">
+                <span className="font-script">V</span>
+                <span className="font-sans">IRTUAL CONCIERGE</span>
+              </p>
             </div>
             <div className="flex items-center gap-2">
               <button
@@ -149,8 +155,8 @@ const ChatWidget: React.FC = () => {
             {messages.map((msg, idx) => (
               <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div className={`max-w-[80%] p-3 rounded-lg text-sm leading-relaxed ${msg.role === 'user'
-                    ? 'bg-white text-black rounded-br-none'
-                    : 'bg-zinc-800 text-gray-200 rounded-bl-none border border-gray-700'
+                  ? 'bg-white text-black rounded-br-none'
+                  : 'bg-zinc-800 text-gray-200 rounded-bl-none border border-gray-700'
                   }`}>
                   {msg.text}
                 </div>

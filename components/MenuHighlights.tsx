@@ -54,7 +54,10 @@ const MenuHighlights: React.FC = () => {
                 className={`relative w-full h-[600px] object-cover transition-all duration-700 ease-in-out shadow-2xl ${isColorized ? 'grayscale-0' : 'grayscale group-hover:grayscale-0'}`}
               />
               <div className="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black to-transparent w-full">
-                <p className="font-script text-4xl text-gold-400">The Signature</p>
+                <p className="text-4xl text-gold-400">
+                  <span className="font-script">T</span>
+                  <span className="font-serif">he Signature</span>
+                </p>
               </div>
             </div>
           </div>
