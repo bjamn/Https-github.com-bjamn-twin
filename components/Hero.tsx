@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
         {/* Text Content - Foreground Layer */}
         <div className="relative z-10 text-center">
           <p className="font-serif text-gold-400 tracking-[0.3em] uppercase text-sm md:text-lg mb-4 animate-fade-in-up">
-            Caterer to the Stars
+            Made from the Heart
           </p>
           <h1 className="font-script text-7xl md:text-9xl lg:text-[11rem] leading-none mb-8 text-white drop-shadow-2xl animate-fade-in">
             With Love, Twin
