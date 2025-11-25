@@ -53,8 +53,8 @@ const OwnerBio: React.FC = () => {
 
                         <div className="h-px w-32 bg-silver-400 mb-8"></div>
 
-                        <blockquote className="text-3xl md:text-4xl text-silver-300 leading-relaxed mb-8">
-                            "<span className="font-script">W</span><span className="font-serif">{bioData.quote.substring(1)}</span>"
+                        <blockquote className="font-script text-4xl md:text-5xl text-silver-300 leading-relaxed mb-8 text-center">
+                            "{bioData.quote}"
                         </blockquote>
 
                         {bioData.paragraphs.map((paragraph, index) => (
