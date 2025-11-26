@@ -58,8 +58,9 @@ const Hero: React.FC = () => {
           <p className="font-serif text-gold-400 tracking-[0.3em] uppercase text-sm md:text-lg mb-4 animate-fade-in-up">
             Made from the Heart
           </p>
-          <h1 className="font-script text-7xl md:text-9xl lg:text-[11rem] leading-none mb-8 text-white drop-shadow-2xl animate-fade-in">
-            With Love, Twin
+          <h1 className="font-script text-7xl md:text-9xl lg:text-[11rem] leading-tight mb-8 text-white drop-shadow-2xl animate-fade-in">
+            <div>With Love,</div>
+            <div className="text-right" style={{ paddingRight: '0.6em' }}>Twin</div>
           </h1>
           <p className="font-serif text-xl md:text-3xl font-light text-gray-200 mb-12 max-w-2xl mx-auto italic relative">
             "Where Southern elegance meets homemade soul."
