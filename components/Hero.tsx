@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
 
         {/* Logo Graphic - Background Layer */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[40rem] md:w-[60rem] lg:w-[80rem] opacity-20 pointer-events-none z-0 select-none">
-          <img src="/logo-graphic.png" alt="Fork and Spoon Logo" className="w-full h-auto invert" />
+          <img src="/logo-new.svg" alt="With Love, Twin Logo" className="w-full h-auto invert" />
         </div>
 
         {/* Text Content - Foreground Layer */}
