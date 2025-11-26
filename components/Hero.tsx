@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
           </p>
           <h1 className="font-script text-7xl md:text-9xl lg:text-[11rem] leading-tight mb-8 text-white drop-shadow-2xl animate-fade-in">
             <div>With Love,&nbsp;&nbsp;&nbsp;</div>
-            <div className="text-right mt-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twin</div>
+            <div className="text-right mt-6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twin</div>
           </h1>
           <p className="font-serif text-xl md:text-3xl font-light text-gray-200 mb-12 max-w-2xl mx-auto italic relative">
             "Where Southern elegance meets homemade soul."
