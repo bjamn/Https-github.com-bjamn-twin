@@ -30,10 +30,10 @@ const MenuHighlights: React.FC = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasSeenSection) {
             setHasSeenSection(true);
-            // Colorize almost immediately (500ms after coming into view)
+            // Colorize almost immediately (1000ms after coming into view)
             setTimeout(() => {
               setIsColorized(true);
-            }, 500);
+            }, 1000);
           }
         });
       },

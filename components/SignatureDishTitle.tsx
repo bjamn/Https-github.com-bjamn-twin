@@ -44,15 +44,15 @@ const SignatureDishTitle: React.FC<SignatureDishTitleProps> = ({ onAnimationPhas
         setStage('initial');
 
         const timer1 = setTimeout(() => setStage('shivering'), 2000);
-        const timer2 = setTimeout(() => setStage('swapping'), 7000); // 2s wait + 5s shiver
-        const timer3 = setTimeout(() => setStage('final'), 7500); // 7s start + 0.3s animation + 200ms buffer
+        const timer2 = setTimeout(() => setStage('swapping'), 4000); // 2s wait + 2s shiver
+        const timer3 = setTimeout(() => setStage('final'), 4500); // 4s start + 0.3s animation + 200ms buffer
 
         // Loop: wait 60s at final, then restart
         const timer4 = setTimeout(() => {
             setHasStarted(false);
             setStage('initial');
             setTimeout(() => startAnimation(), 100);
-        }, 67500); // 7.5s + 60s
+        }, 64500); // 4.5s + 60s
 
         return () => {
             clearTimeout(timer1);
