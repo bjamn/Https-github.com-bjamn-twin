@@ -37,15 +37,15 @@
   }
 
   .swap-shrimp {
-    animation: swap-shrimp 3s ease-in-out forwards;
+    animation: swap-shrimp 0.3s ease-in-out forwards;
   }
 
   .swap-grits {
-    animation: swap-grits 3s ease-in-out forwards;
+    animation: swap-grits 0.3s ease-in-out forwards;
   }
 
   .swap-and {
-    animation: stay-center 3s ease-in-out forwards;
+    animation: stay-center 0.3s ease-in-out forwards;
   }
 
   @keyframes swap-shrimp {

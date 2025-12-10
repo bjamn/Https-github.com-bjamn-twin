@@ -54,7 +54,7 @@ const Testimonials: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="mb-20 text-center">
           <span className="font-serif text-gold-400 uppercase tracking-[0.2em] text-sm">Wall of Love</span>
-          <h2 className="font-script text-6xl md:text-8xl mt-4">Word on the Street</h2>
+          <h2 className="font-script text-6xl md:text-8xl mt-4">The Word Is Out</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
