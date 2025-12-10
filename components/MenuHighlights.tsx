@@ -20,13 +20,41 @@ const MenuHighlights: React.FC = () => {
   }, []);
 
   const [isColorized, setIsColorized] = useState(false);
+  const [hasSeenSection, setHasSeenSection] = useState(false);
+  const sectionRef = React.useRef<HTMLElement>(null);
+
+  // Colorize image almost immediately when section becomes visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasSeenSection) {
+            setHasSeenSection(true);
+            // Colorize almost immediately (500ms after coming into view)
+            setTimeout(() => {
+              setIsColorized(true);
+            }, 500);
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger when 20% visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasSeenSection]);
 
   const handleAnimationPhaseChange = (phase: 'initial' | 'shivering' | 'swapping' | 'final') => {
-    // Colorize image at final stage
+    // Keep this for potential future use, but colorization now happens independently
     if (phase === 'final') {
       setIsColorized(true);
-    } else if (phase === 'initial') {
-      setIsColorized(false);
     }
   };
 
@@ -37,7 +65,7 @@ const MenuHighlights: React.FC = () => {
   }
 
   return (
-    <section id="menu" className="py-24 bg-black text-white relative">
+    <section ref={sectionRef} id="menu" className="py-24 bg-black text-white relative">
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
 
