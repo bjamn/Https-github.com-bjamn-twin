@@ -9,15 +9,30 @@ const Contact: React.FC = () => {
           <p className="font-serif text-xl text-gray-300 font-light">
             Ready to bring a taste of the South to your next event?
           </p>
+          <div className="mt-8 flex flex-col items-center gap-4 font-serif">
+            <p className="text-sm uppercase tracking-widest text-gray-400">Get in touch with Cheryl</p>
+            <a
+              href="tel:+14692155861"
+              className="inline-flex min-h-11 items-center text-2xl text-gold-400 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-400"
+            >
+              (469) 215-5861
+            </a>
+            <a
+              href="mailto:cheryljtwin@gmail.com"
+              className="inline-flex min-h-11 items-center break-all text-lg text-gray-300 underline underline-offset-4 hover:text-gold-400 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-400"
+            >
+              cheryljtwin@gmail.com
+            </a>
+          </div>
         </div>
 
-        <form action="https://formsubmit.co/info@withlovetwin.com" method="POST" className="space-y-12">
+        <form action="https://formsubmit.co/cheryljtwin@gmail.com" method="POST" className="space-y-12">
           {/* Honey Pot for spam */}
           <input type="text" name="_honey" style={{ display: 'none' }} />
           {/* Disable Captcha */}
           <input type="hidden" name="_captcha" value="false" />
           {/* Redirect to same page (or custom thank you) */}
-          <input type="hidden" name="_next" value="http://localhost:3000" />
+          <input type="hidden" name="_next" value="https://withlovetwin.vercel.app/#contact" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="group">
