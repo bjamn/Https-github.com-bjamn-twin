@@ -80,6 +80,22 @@ const Contact: React.FC = () => {
 
         <div className="mt-24 flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-12 text-gray-500 font-serif text-sm">
           <p>&copy; {new Date().getFullYear()} With Love, Twin. All rights reserved.</p>
+          <a
+            href="/qr"
+            className="mt-6 md:mt-0 group flex flex-col items-center gap-2 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-400"
+            aria-label="Open the QR code for withlovetwin.com full screen"
+          >
+            <span className="block rounded-lg bg-white p-1.5 transition-transform duration-300 group-hover:scale-105">
+              <img
+                src="/withlovetwin-qr.svg"
+                alt="QR code for withlovetwin.com"
+                width={96}
+                height={96}
+                className="block w-24 h-24"
+              />
+            </span>
+            <span className="text-xs uppercase tracking-widest">Scan to visit</span>
+          </a>
           <div className="mt-4 md:mt-0 space-x-6">
             <a href="https://www.instagram.com/cheryljonestwin/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
             <a href="https://www.facebook.com/cheryl.jones.37669" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Facebook</a>
